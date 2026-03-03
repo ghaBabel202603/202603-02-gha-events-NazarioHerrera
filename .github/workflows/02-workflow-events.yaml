@@ -1,5 +1,11 @@
 name: 02 - Eventos
-on: push
+on: 
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 7 * * *' # Todos os dias las 7h UTC
+  workflow_dispatch:
+
 jobs:
     echo:
         runs-on: ubuntu-latest 
